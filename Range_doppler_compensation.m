@@ -40,23 +40,7 @@ C24=xcorr(data(1+m*(i-1):i*m,4)-mean(data(1+m*(i-1):i*m,4)),outputSignal2);
 [~,p22(i)]=max(envelope(C22));
 [~,p23(i)]=max(envelope(C23));
 [~,p24(i)]=max(envelope(C24));
-% p11=p11+2700;
-% p12=p12+2700;
-% p13=p13+2700;
-% p14=p14+2700;
-% p21=p21+2700;
-% p22=p22+2700;
-% p23=p23+2700;
-% p24=p24+2700;
-%multipath compensation
-% [p_ephp11(i)]=multipath(C11,l);
-% [p_ephp12(i)]=multipath(C12,l);
-% [p_ephp13(i)]=multipath(C13,l);
-% [p_ephp14(i)]=multipath(C14,l);
-% [p_ephp21(i)]=multipath(C21,l);
-% [p_ephp22(i)]=multipath(C22,l);
-% [p_ephp23(i)]=multipath(C23,l);
-% [p_ephp24(i)]=multipath(C24,l);
+
 if ~mod(i,2)
 TOF11(i/2)=(p21(i)+p11(i-1)-2*length(outputSignal1))/2;
 TOF12(i/2)=(p22(i)+p12(i-1)-2*length(outputSignal1))/2;
