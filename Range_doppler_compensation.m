@@ -21,7 +21,7 @@ Range_ephp2=[];
 l=5000;
 m=l/2;
 n=length(data)/m;
-
+% Finding the correlation of the received signals with the stored template signals
 for i=1:n
 C11=xcorr(data(1+m*(i-1):i*m,1)-mean(data(1+m*(i-1):i*m,1)),outputSignal1);
 C12=xcorr(data(1+m*(i-1):i*m,2)-mean(data(1+m*(i-1):i*m,2)),outputSignal1);
